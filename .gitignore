@@ -3,4 +3,5 @@ obj/
 plan/
 *.cbp
 *.depend
+*.layout
 Uzytkownicy.txt
