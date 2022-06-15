@@ -18,5 +18,9 @@ int main()
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
+    //wylogowanie:
+    idZalogowanegoUzytkownika = 0;
+    //adresaci.clear();
+
     return 0;
 }
