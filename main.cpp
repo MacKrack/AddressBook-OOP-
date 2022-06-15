@@ -8,9 +8,12 @@ int main()
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
+    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
+
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
-    ksiazkaAdresowa.rejestracjaUzytkownika();
     ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();

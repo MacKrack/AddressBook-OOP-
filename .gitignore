@@ -4,4 +4,5 @@ plan/
 *.cbp
 *.depend
 *.layout
+*.cscope_file_list
 Uzytkownicy.txt
