@@ -9,7 +9,7 @@ int main()
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
     int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
-    int idOstatniegoAdresata = 0;
+    int idOstatniegoAdresata = ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 
     idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();

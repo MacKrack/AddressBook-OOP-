@@ -30,7 +30,7 @@ public:
     int dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
     void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata(Adresat adresat);
-
+    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 
 };
 

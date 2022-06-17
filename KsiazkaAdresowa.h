@@ -24,6 +24,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
     int dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
     void wyswietlWszystkichAdresatow();
+    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 
 };
 
