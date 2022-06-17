@@ -22,6 +22,7 @@ class AdresatMenedzer
 
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
 
+    PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
 
 public:

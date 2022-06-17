@@ -9,7 +9,7 @@ int AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika, int idOstatnie
     adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika, idOstatniegoAdresata);
 
     adresaci.push_back(adresat);
-    //dopiszAdresataDoPliku(adresat);
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
 
     return ++idOstatniegoAdresata;
 }
