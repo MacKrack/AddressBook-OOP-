@@ -20,3 +20,12 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytk
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
 }
 
+int KsiazkaAdresowa::dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+{
+    adresatMenedzer.dodajAdresata(idZalogowanegoUzytkownika, idOstatniegoAdresata);
+}
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatMenedzer.wyswietlWszystkichAdresatow();
+}
