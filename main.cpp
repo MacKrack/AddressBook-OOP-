@@ -9,9 +9,17 @@ int main()
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
     int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
-    int idOstatniegoAdresata = ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    int idOstatniegoAdresata;
 
-    idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
+    cout << idZalogowanegoUzytkownika << endl;
+    system("pause");
+
+
+    ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+
+        cout << idZalogowanegoUzytkownika << endl;
+    system("pause");
+
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
