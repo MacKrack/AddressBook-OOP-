@@ -95,20 +95,14 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                     system("pause");
                     return idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
                 }
-                cout << "Wprowadzono 3 razy bledne haslo." << endl;
-                system("pause");
-                return idZalogowanegoUzytkownika = 0;
             }
-            cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+            cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
             return idZalogowanegoUzytkownika = 0;
         }
     }
-}
-
-int UzytkownikMenedzer::wylogowywanieUzytkownika()
-{
-    uzytkownicy.clear();
+    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+    system("pause");
     return idZalogowanegoUzytkownika = 0;
 }
 
@@ -133,4 +127,10 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
+}
+
+int UzytkownikMenedzer::wylogowywanieUzytkownika()
+{
+    uzytkownicy.clear();
+    return idZalogowanegoUzytkownika = 0;
 }

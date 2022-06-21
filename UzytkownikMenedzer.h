@@ -32,9 +32,9 @@ public:
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
     int logowanieUzytkownika();
-    int wylogowywanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
+    int wylogowywanieUzytkownika();
 };
 
 #endif
