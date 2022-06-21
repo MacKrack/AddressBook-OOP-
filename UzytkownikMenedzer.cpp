@@ -57,12 +57,15 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 {
-    for (int i=0; i < uzytkownicy.size(); i++)
-    {
-        cout << uzytkownicy[i].pobierzId() << endl;
-        cout << uzytkownicy[i].pobierzLogin() << endl;
-        cout << uzytkownicy[i].pobierzHaslo() << endl;
-    }
+    if (uzytkownicy.empty() == true)
+        cout << "Nie ma jeszcze zadnych Uzytkownikow" << endl;
+    else
+        for (int i=0; i < uzytkownicy.size(); i++)
+        {
+            cout << endl << uzytkownicy[i].pobierzId() << endl;
+            cout << uzytkownicy[i].pobierzLogin() << endl;
+            cout << uzytkownicy[i].pobierzHaslo() << endl;
+        }
 }
 
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
@@ -92,21 +95,20 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                     system("pause");
                     return idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
                 }
+                cout << "Wprowadzono 3 razy bledne haslo." << endl;
+                system("pause");
+                return idZalogowanegoUzytkownika = 0;
             }
-            cout << "Wprowadzono 3 razy bledne haslo." << endl;
+            cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
             system("pause");
             return idZalogowanegoUzytkownika = 0;
         }
     }
-    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
-    system("pause");
-    return idZalogowanegoUzytkownika = 0;
 }
 
 int UzytkownikMenedzer::wylogowywanieUzytkownika()
 {
-    //nalezy dodac funkcje czyszczaca vector adresaci
-    //uzytkownicy.clear();
+    uzytkownicy.clear();
     return idZalogowanegoUzytkownika = 0;
 }
 

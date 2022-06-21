@@ -81,3 +81,14 @@ int AdresatMenedzer::pobierzIdOstatniegoAdresata()
     else
         return adresaci.back().pobierzId();
 }
+
+void AdresatMenedzer::wylogowanieUzytkownikaCzyszczenieVectora()
+{
+    adresaci.clear();
+}
+
+bool AdresatMenedzer::czyPlikIstnieje()
+{
+    plikZAdresatami.czyPlikIstnieje();
+}
+

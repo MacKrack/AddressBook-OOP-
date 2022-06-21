@@ -13,11 +13,13 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenedzer.logowanieUzytkownika();
+    //adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa::wylogowywanieUzytkownika()
 {
     uzytkownikMenedzer.wylogowywanieUzytkownika();
+    adresatMenedzer.wylogowanieUzytkownikaCzyszczenieVectora();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()

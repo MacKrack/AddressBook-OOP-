@@ -27,6 +27,7 @@ public:
     PlikZAdresatami();
     void dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    bool czyPlikIstnieje();
 };
 
 #endif

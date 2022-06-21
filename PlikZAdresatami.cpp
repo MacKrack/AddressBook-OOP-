@@ -62,6 +62,23 @@ bool PlikZAdresatami::czyPlikJestPusty()
     plikTekstowy.close();
 }
 
+bool PlikZAdresatami::czyPlikIstnieje()
+{
+    fstream plikTekstowy;
+    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
+
+    if (plikTekstowy.good() == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    plikTekstowy.close();
+}
+
+
 vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
@@ -90,14 +107,6 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     plikTekstowy.close();
 
     return adresaci;
-
-//    if (daneOstaniegoAdresataWPliku != "")
-//    {
-//        idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-//        return adresaci;
-//    }
-//    else
-//        return 0;
 }
 
 Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)

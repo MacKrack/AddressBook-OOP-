@@ -10,33 +10,27 @@ int main()
 
     //MENU LOGOWANIA / REJESTRACJI U¯YTKOWNIKA:
 
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     ksiazkaAdresowa.logowanieUzytkownika();
 
 //    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-
-    ksiazkaAdresowa.dodajAdresata();
-
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-
-    ksiazkaAdresowa.dodajAdresata();
-
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-
-
-
-//    ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 //
-
-
-//    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
-
-
-    //WYLOGOWYWANIE:
+//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+//
+//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+//
+//    ksiazkaAdresowa.dodajAdresata();
+//
+//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+//
 //    ksiazkaAdresowa.wylogowywanieUzytkownika();
+//
+//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+//
+//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     return 0;
 }

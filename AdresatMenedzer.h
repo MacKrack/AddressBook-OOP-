@@ -31,6 +31,8 @@ public:
     void dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void wylogowanieUzytkownikaCzyszczenieVectora();
+    bool czyPlikIstnieje();
 };
 
 #endif

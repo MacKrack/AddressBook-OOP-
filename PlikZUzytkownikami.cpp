@@ -5,6 +5,7 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
     fstream plikTekstowy;
 
     string liniaZDanymiUzytkownika = "";
+
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
 
     if (plikTekstowy.good() == true)
