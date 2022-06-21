@@ -8,40 +8,35 @@ int main()
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
-    //Menu Logowania / Rejestracji Uzytkownika:
+    //MENU LOGOWANIA / REJESTRACJI U¯YTKOWNIKA:
 
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-
-    ksiazkaAdresowa.rejestracjaUzytkownika();
+//    ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
-//    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+
+//    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
+    ksiazkaAdresowa.dodajAdresata();
+
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.dodajAdresata();
+
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
 
 
 //    ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 //
-//
-//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-//
-//    idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
-//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
 
 //    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
 
-//    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
-//
-//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-//
 
-//
-
-
-    //wylogowanie:
-    //idZalogowanegoUzytkownika = 0;
-    //adresaci.clear();
+    //WYLOGOWYWANIE:
+//    ksiazkaAdresowa.wylogowywanieUzytkownika();
 
     return 0;
 }

@@ -1,5 +1,5 @@
-//#ifndef ADRESATMENEDZER_H
-//#define ADRESATMENEDZER_H
+#ifndef ADRESATMENEDZER_H
+#define ADRESATMENEDZER_H
 
 #include <iostream>
 #include <vector>
@@ -11,14 +11,16 @@
 #include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
 
-
 using namespace std;
 
 class AdresatMenedzer
 {
-    int idZalogowanegoUzytkownika;
     int idOstatniegoAdresata;
     vector <Adresat> adresaci;
+
+    int pobierzIdOstatniegoAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
+
 
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
 
@@ -26,11 +28,9 @@ class AdresatMenedzer
     MetodyPomocnicze metodyPomocnicze;
 
 public:
-
-    int dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
+    void dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
-    void wyswietlDaneAdresata(Adresat adresat);
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 };
 
-//#endif
+#endif

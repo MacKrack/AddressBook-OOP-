@@ -1,3 +1,6 @@
+#ifndef PLIKZADRESATAMI_H
+#define PLIKZADRESATAMI_H
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -26,3 +29,4 @@ public:
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 };
 
+#endif
