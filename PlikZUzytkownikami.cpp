@@ -29,11 +29,15 @@ bool PlikZUzytkownikami::czyPlikJestPusty()
 {
     fstream plikTekstowy;
 
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
+
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
     else
         return false;
+
+    plikTekstowy.close();
 }
 
 string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
@@ -118,7 +122,7 @@ void PlikZUzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik>
 
             if (itr == itrKoniec)
             {
-               plikTekstowy << liniaZDanymiUzytkownika;
+                plikTekstowy << liniaZDanymiUzytkownika;
             }
             else
             {

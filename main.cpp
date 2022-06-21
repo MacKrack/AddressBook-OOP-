@@ -8,22 +8,26 @@ int main()
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
-    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
-    int idOstatniegoAdresata;
+    //Menu Logowania / Rejestracji Uzytkownika:
 
-    cout << idZalogowanegoUzytkownika << endl;
-    system("pause");
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+
+//    ksiazkaAdresowa.logowanieUzytkownika();
 
 
-    ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-
-        cout << idZalogowanegoUzytkownika << endl;
-    system("pause");
-
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-
-    idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+//    ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+//
+//
+//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+//
+//    idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
+//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
 //    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
 
@@ -31,9 +35,9 @@ int main()
 //
 //    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 //
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
+
 //
-//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+
 
     //wylogowanie:
     //idZalogowanegoUzytkownika = 0;
