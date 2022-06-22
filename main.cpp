@@ -14,20 +14,23 @@ int main()
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
+    //PO ZALOGOWANIU PLIK AUTOMATYCZNIEWCZYTUJE KONTAKTY UZYTKOWNIKA
     ksiazkaAdresowa.logowanieUzytkownika();
 
-//    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-//
-//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-//
-//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-//
-//    ksiazkaAdresowa.dodajAdresata();
-//
-//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-//
-//    ksiazkaAdresowa.wylogowywanieUzytkownika();
-//
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.dodajAdresata();
+
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.wylogowywanieUzytkownika();
+
+    //PO WYLOGOWANIU WYSTWIETLAM VECTORY DLA SPRAWDZENIA CZY ZOSTALY WYCZYSZCZONE
+
 //    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 //
 //    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();

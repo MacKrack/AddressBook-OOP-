@@ -51,6 +51,7 @@ void AdresatMenedzer::wyswietlWszystkichAdresatow()
             wyswietlDaneAdresata(*itr);
         }
         cout << endl;
+        system("pause");
     }
     else
     {
