@@ -12,8 +12,12 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    uzytkownikMenedzer.logowanieUzytkownika();
-    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+    while (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() == 0)
+    {
+        uzytkownikMenedzer.logowanieUzytkownika();
+    }
+    if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() !=0)
+        adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa::wylogowywanieUzytkownika()
