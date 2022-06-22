@@ -6,7 +6,7 @@ void AdresatMenedzer::dodajAdresata(int idZalogowanegoUzytkownika)
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika, pobierzIdOstatniegoAdresata());
+    adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika, plikZAdresatami.pobierzZPlikuIdOstatniegoAdresata());
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
@@ -73,14 +73,6 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
 void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
 {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-}
-
-int AdresatMenedzer::pobierzIdOstatniegoAdresata()
-{
-    if (adresaci.empty() == true)
-        return 0;
-    else
-        return adresaci.back().pobierzId();
 }
 
 void AdresatMenedzer::wylogowanieUzytkownikaCzyszczenieVectora()
