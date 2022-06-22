@@ -10,24 +10,37 @@ int main()
 
     //MENU LOGOWANIA / REJESTRACJI U¯YTKOWNIKA:
 
-    ksiazkaAdresowa.rejestracjaUzytkownika();
+//    ksiazkaAdresowa.rejestracjaUzytkownika();
+//
+//    ksiazkaAdresowa.rejestracjaUzytkownika();
+//
+//    ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
-    //PO ZALOGOWANIU PLIK AUTOMATYCZNIEWCZYTUJE KONTAKTY UZYTKOWNIKA
+    //PO ZALOGOWANIU PLIK AUTOMATYCZNIE WCZYTUJE KONTAKTY UZYTKOWNIKA
+
     ksiazkaAdresowa.logowanieUzytkownika();
 
-    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+    ksiazkaAdresowa.dodajAdresata();
 
     ksiazkaAdresowa.dodajAdresata();
 
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     ksiazkaAdresowa.wylogowywanieUzytkownika();
+
+    ksiazkaAdresowa.logowanieUzytkownika();
+
+    ksiazkaAdresowa.dodajAdresata();
+
+    ksiazkaAdresowa.dodajAdresata();
+
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.wylogowywanieUzytkownika();
+
+    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 
     //PO WYLOGOWANIU WYSTWIETLAM VECTORY DLA SPRAWDZENIA CZY ZOSTALY WYCZYSZCZONE
 

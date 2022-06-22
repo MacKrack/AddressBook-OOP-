@@ -137,6 +137,5 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 
 int UzytkownikMenedzer::wylogowywanieUzytkownika()
 {
-    uzytkownicy.clear();
     return idZalogowanegoUzytkownika = 0;
 }
