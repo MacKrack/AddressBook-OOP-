@@ -28,6 +28,8 @@ public:
     void dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     bool czyPlikIstnieje();
+    int pobierzZPlikuIdOstatniegoAdresata();
+
 };
 
 #endif

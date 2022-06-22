@@ -8,13 +8,13 @@ int main()
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
-    //MENU LOGOWANIA / REJESTRACJI U¯YTKOWNIKA:
+    //MENU LOGOWANIA / REJESTRACJI UZYTKOWNIKA:
 
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
-//
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
-//
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+
+    ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 

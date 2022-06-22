@@ -18,7 +18,6 @@ class AdresatMenedzer
     int idOstatniegoAdresata;
     vector <Adresat> adresaci;
 
-    int pobierzIdOstatniegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
 
 
@@ -33,6 +32,7 @@ public:
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void wylogowanieUzytkownikaCzyszczenieVectora();
     bool czyPlikIstnieje();
+
 };
 
 #endif
