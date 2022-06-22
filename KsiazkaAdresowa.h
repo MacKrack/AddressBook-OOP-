@@ -20,12 +20,12 @@ public:
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    int logowanieUzytkownika();
-    void zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
-    int dodajAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
+    void logowanieUzytkownika();
+    void wylogowywanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
-
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
 };
 
 #endif

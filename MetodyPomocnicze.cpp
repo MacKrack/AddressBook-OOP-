@@ -11,7 +11,7 @@ string MetodyPomocnicze::konwerjsaIntNaString(int liczba)
 string MetodyPomocnicze::wczytajLinie()
 {
     string wejscie = "";
-    getline(cin, wejscie);
+    getline(cin >> ws, wejscie);
     return wejscie;
 }
 

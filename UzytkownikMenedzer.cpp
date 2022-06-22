@@ -57,11 +57,20 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
 {
-    for (int i=0; i < uzytkownicy.size(); i++)
+    if (uzytkownicy.empty() == true)
     {
-        cout << uzytkownicy[i].pobierzId() << endl;
-        cout << uzytkownicy[i].pobierzLogin() << endl;
-        cout << uzytkownicy[i].pobierzHaslo() << endl;
+        cout << "Nie ma jeszcze zadnych Uzytkownikow" << endl;
+        system("pause");
+    }
+    else
+    {
+        for (int i=0; i < uzytkownicy.size(); i++)
+        {
+            cout << endl << uzytkownicy[i].pobierzId() << endl;
+            cout << uzytkownicy[i].pobierzLogin() << endl;
+            cout << uzytkownicy[i].pobierzHaslo() << endl;
+        }
+        system("pause");
     }
 }
 
@@ -90,20 +99,20 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return uzytkownicy[i].pobierzId();
+                    return idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            return idZalogowanegoUzytkownika = 0;
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    return idZalogowanegoUzytkownika = 0;
 }
 
-void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
@@ -119,4 +128,15 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika(int idZalogowanegoUz
         }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
+
+int UzytkownikMenedzer::wylogowywanieUzytkownika()
+{
+    uzytkownicy.clear();
+    return idZalogowanegoUzytkownika = 0;
 }

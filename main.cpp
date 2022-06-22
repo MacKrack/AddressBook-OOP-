@@ -8,36 +8,32 @@ int main()
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
-    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
-    int idOstatniegoAdresata;
+    //MENU LOGOWANIA / REJESTRACJI U¯YTKOWNIKA:
 
-    cout << idZalogowanegoUzytkownika << endl;
-    system("pause");
+    ksiazkaAdresowa.rejestracjaUzytkownika();
 
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
-    ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    //PO ZALOGOWANIU PLIK AUTOMATYCZNIEWCZYTUJE KONTAKTY UZYTKOWNIKA
+    ksiazkaAdresowa.logowanieUzytkownika();
 
-        cout << idZalogowanegoUzytkownika << endl;
-    system("pause");
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
-    idOstatniegoAdresata = ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika,idOstatniegoAdresata);
+    ksiazkaAdresowa.dodajAdresata();
+
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
-//    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.wylogowywanieUzytkownika();
 
-//    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+    //PO WYLOGOWANIU WYSTWIETLAM VECTORY DLA SPRAWDZENIA CZY ZOSTALY WYCZYSZCZONE
+
+//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 //
 //    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-//
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
-//
-//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
-    //wylogowanie:
-    //idZalogowanegoUzytkownika = 0;
-    //adresaci.clear();
 
     return 0;
 }
