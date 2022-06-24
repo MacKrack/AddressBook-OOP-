@@ -10,11 +10,11 @@ int main()
 
     //MENU LOGOWANIA / REJESTRACJI UZYTKOWNIKA:
 
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-
-    ksiazkaAdresowa.rejestracjaUzytkownika();
+//    ksiazkaAdresowa.rejestracjaUzytkownika();
+//
+//    ksiazkaAdresowa.rejestracjaUzytkownika();
+//
+//    ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
