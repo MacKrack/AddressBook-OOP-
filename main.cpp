@@ -3,10 +3,10 @@
 
 using namespace std;
 
-int main()
+int _main()
 {
 
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
     //MENU LOGOWANIA / REJESTRACJI UZYTKOWNIKA:
 
@@ -49,4 +49,33 @@ int main()
 //    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     return 0;
+}
+
+
+//TESTY AdresatMenedzer
+
+#include "AdresatMenedzer.h"
+
+int testAdresatMenedzer_main()
+{
+    AdresatMenedzer adresatMenedzer("Adresaci.txt",2);
+    adresatMenedzer.wyswietlWszystkichAdresatow();
+    adresatMenedzer.dodajAdresata();
+    adresatMenedzer.wyswietlWszystkichAdresatow();
+
+
+}
+
+
+// TESTY PlikZAdresatami
+#include "Adresat.h"
+#include "PlikZAdresatami.h"
+
+int main()
+{
+ PlikZAdresatami plikZAdresatami("Adressaci-test1.txt");
+ Adresat adresat(1,2,"Sss","Sss","sss","sss","sss");
+
+ plikZAdresatami.dopiszAdresataDoPliku(adresat);
+ cout << plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
