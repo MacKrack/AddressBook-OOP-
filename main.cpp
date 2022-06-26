@@ -6,13 +6,9 @@ using namespace std;
 int main()
 {
 
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
     //MENU LOGOWANIA / REJESTRACJI UZYTKOWNIKA:
-
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-
-    ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.rejestracjaUzytkownika();
 
@@ -22,7 +18,7 @@ int main()
 
     ksiazkaAdresowa.logowanieUzytkownika();
 
-    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 
     ksiazkaAdresowa.dodajAdresata();
 
@@ -32,7 +28,7 @@ int main()
 
     ksiazkaAdresowa.logowanieUzytkownika();
 
-    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 
     ksiazkaAdresowa.dodajAdresata();
 
@@ -40,13 +36,21 @@ int main()
 
     ksiazkaAdresowa.wylogowywanieUzytkownika();
 
-    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
+    ksiazkaAdresowa.dodajAdresata();
+
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.wylogowywanieUzytkownika();
 
     //PO WYLOGOWANIU WYSTWIETLAM VECTORY DLA SPRAWDZENIA CZY ZOSTALY WYCZYSZCZONE
 
-//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-//
-//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     return 0;
 }
