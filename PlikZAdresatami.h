@@ -12,7 +12,8 @@
 
 class PlikZAdresatami
 {
-    string nazwaPlikuZAdresatami;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
+    int idOstatniegoAdresata;
 
     MetodyPomocnicze metodyPomocnicze;
 
@@ -24,12 +25,15 @@ class PlikZAdresatami
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
 
 public:
-    PlikZAdresatami();
+    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami)
+    {
+        idOstatniegoAdresata = 0;
+    };
     void dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     bool czyPlikIstnieje();
     int pobierzZPlikuIdOstatniegoAdresata();
-
+    int pobierzIdOstatniegoAdresata();
 };
 
 #endif

@@ -29,6 +29,7 @@ public:
 
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
     {
+        idZalogowanegoUzytkownika = 0;
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
     };
     void rejestracjaUzytkownika();
@@ -37,6 +38,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
     int wylogowywanieUzytkownika();
+    bool czyUzytkownikJestZalogowany();
 };
 
 #endif

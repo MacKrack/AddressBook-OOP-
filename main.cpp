@@ -3,17 +3,13 @@
 
 using namespace std;
 
-int _main()
+int main()
 {
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
     //MENU LOGOWANIA / REJESTRACJI UZYTKOWNIKA:
 
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
-//
-//    ksiazkaAdresowa.rejestracjaUzytkownika();
-//
     ksiazkaAdresowa.rejestracjaUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
@@ -22,7 +18,7 @@ int _main()
 
     ksiazkaAdresowa.logowanieUzytkownika();
 
-    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 
     ksiazkaAdresowa.dodajAdresata();
 
@@ -32,7 +28,7 @@ int _main()
 
     ksiazkaAdresowa.logowanieUzytkownika();
 
-    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 
     ksiazkaAdresowa.dodajAdresata();
 
@@ -40,42 +36,21 @@ int _main()
 
     ksiazkaAdresowa.wylogowywanieUzytkownika();
 
-    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+
+    ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+
+    ksiazkaAdresowa.dodajAdresata();
+
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.wylogowywanieUzytkownika();
 
     //PO WYLOGOWANIU WYSTWIETLAM VECTORY DLA SPRAWDZENIA CZY ZOSTALY WYCZYSZCZONE
 
-//    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-//
-//    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
     return 0;
-}
-
-
-//TESTY AdresatMenedzer
-
-#include "AdresatMenedzer.h"
-
-int testAdresatMenedzer_main()
-{
-    AdresatMenedzer adresatMenedzer("Adresaci.txt",2);
-    adresatMenedzer.wyswietlWszystkichAdresatow();
-    adresatMenedzer.dodajAdresata();
-    adresatMenedzer.wyswietlWszystkichAdresatow();
-
-
-}
-
-
-// TESTY PlikZAdresatami
-#include "Adresat.h"
-#include "PlikZAdresatami.h"
-
-int main()
-{
- PlikZAdresatami plikZAdresatami("Adressaci-test1.txt");
- Adresat adresat(1,2,"Sss","Sss","sss","sss","sss");
-
- plikZAdresatami.dopiszAdresataDoPliku(adresat);
- cout << plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
