@@ -38,7 +38,7 @@ public:
     char wybierzOpcjeZMenuUzytkownika();
     bool czyUzytkownikJestZalogowany();
     void wyszukajAdresatowPoImieniu();
-
+    void wyszukajAdresatowPoNazwisku();
 
 };
 
