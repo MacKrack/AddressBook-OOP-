@@ -14,6 +14,7 @@ public:
     string wczytajLinie();
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     int konwersjaStringNaInt(string liczba);
+    char wczytajZnak();
 
 };
 
