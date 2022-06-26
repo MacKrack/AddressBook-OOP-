@@ -105,3 +105,9 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
     else
         return false;
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    adresatMenedzer->wyszukajAdresatowPoImieniu();
+}
+
