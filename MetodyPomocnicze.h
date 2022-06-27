@@ -15,7 +15,8 @@ public:
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     int konwersjaStringNaInt(string liczba);
     char wczytajZnak();
-
+    int wczytajLiczbeCalkowita();
+    string pobierzLiczbe(string tekst, int pozycjaZnaku);
 };
 
 #endif

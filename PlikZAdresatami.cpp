@@ -16,7 +16,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         }
         else
         {
-            plikTekstowy << endl << liniaZDanymiAdresata ;
+            plikTekstowy << endl << liniaZDanymiAdresata;
         }
         idOstatniegoAdresata++;
     }
@@ -153,7 +153,7 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
 int PlikZAdresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
 {
     int pozycjaRozpoczeciaIdUzytkownika = daneJednegoAdresataOddzielonePionowymiKreskami.find_first_of('|') + 1;
-    int idUzytkownika = metodyPomocnicze.konwersjaStringNaInt(pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdUzytkownika));
+    int idUzytkownika = metodyPomocnicze.konwersjaStringNaInt(metodyPomocnicze.pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdUzytkownika));
 
     return idUzytkownika;
 }
@@ -161,19 +161,8 @@ int PlikZAdresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(st
 int PlikZAdresatami::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
 {
     int pozycjaRozpoczeciaIdAdresata = 0;
-    int idAdresata = metodyPomocnicze.konwersjaStringNaInt(pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdAdresata));
+    int idAdresata = metodyPomocnicze.konwersjaStringNaInt(metodyPomocnicze.pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdAdresata));
     return idAdresata;
-}
-
-string PlikZAdresatami::pobierzLiczbe(string tekst, int pozycjaZnaku)
-{
-    string liczba = "";
-    while(isdigit(tekst[pozycjaZnaku]) == true)
-    {
-        liczba += tekst[pozycjaZnaku];
-        pozycjaZnaku ++;
-    }
-    return liczba;
 }
 
 int PlikZAdresatami::pobierzZPlikuIdOstatniegoAdresata()
@@ -203,4 +192,51 @@ int PlikZAdresatami::pobierzZPlikuIdOstatniegoAdresata()
 int PlikZAdresatami::pobierzIdOstatniegoAdresata()
 {
     return idOstatniegoAdresata;
+}
+
+void PlikZAdresatami::usunWybranegoAdresataZPliku(string liniaDoUsuniecia, int idUsuwanegoAdresata)
+{
+    string linia="";
+    int numerLinii = 1;
+    int numerLiniiWPlikuTekstowym = 1;
+    string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt";
+    fstream obecny, nowy;
+    obecny.open (NAZWA_PLIKU_Z_ADRESATAMI, ios::in);
+    nowy.open (nazwaTymczasowegoPlikuZAdresatami, ios::out | ios::app);
+
+    while (getline(obecny, linia))
+    {
+
+        if (linia == liniaDoUsuniecia) {}
+        else if (numerLinii == 1 && linia != liniaDoUsuniecia)
+        {
+            nowy << linia;
+            numerLiniiWPlikuTekstowym++;
+        }
+        else if (numerLinii == 2 && numerLiniiWPlikuTekstowym == 1)
+            nowy << linia;
+        else if (numerLinii > 2 && numerLiniiWPlikuTekstowym == 1)
+            nowy << endl << linia;
+        else if (numerLinii > 1 && numerLiniiWPlikuTekstowym != 1)
+            nowy << endl << linia;
+        numerLinii++;
+    }
+    obecny.close();
+    nowy.close();
+    usunPlik(NAZWA_PLIKU_Z_ADRESATAMI);
+    zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, NAZWA_PLIKU_Z_ADRESATAMI);
+}
+
+void PlikZAdresatami::usunPlik(string nazwaPlikuZRozszerzeniem)
+{
+    if (remove(nazwaPlikuZRozszerzeniem.c_str()) == 0) {}
+    else
+        cout << "Nie udalo sie usunac pliku " << nazwaPlikuZRozszerzeniem << endl;
+}
+
+void PlikZAdresatami::zmienNazwePliku(string staraNazwa, string nowaNazwa)
+{
+    if (rename(staraNazwa.c_str(), nowaNazwa.c_str()) == 0) {}
+    else
+        cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
 }
