@@ -13,7 +13,7 @@ class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
     AdresatMenedzer *adresatMenedzer;
-    MetodyPomocnicze metodyPomocnicze;
+    //MetodyPomocnicze metodyPomocnicze;
     const string NAZWA_PLIKU_Z_ADRESATAMI;
 
 public:

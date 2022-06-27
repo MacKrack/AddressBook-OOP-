@@ -16,7 +16,7 @@ class PlikZAdresatami : public PlikTekstowy
     //const string NAZWA_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 
-    MetodyPomocnicze metodyPomocnicze;
+    //MetodyPomocnicze metodyPomocnicze;
 
     bool czyPlikJestPusty();
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);

@@ -70,7 +70,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
     cout << "9. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = metodyPomocnicze.wczytajZnak();
+    wybor = MetodyPomocnicze::wczytajZnak();
 
     return wybor;
 }
@@ -93,7 +93,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     cout << "8. Wyloguj sie" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = metodyPomocnicze.wczytajZnak();
+    wybor = MetodyPomocnicze::wczytajZnak();
 
     return wybor;
 }
