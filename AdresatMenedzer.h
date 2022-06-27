@@ -37,7 +37,7 @@ public:
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void usunAdresata();
-//    void edytujAdresata();
+    void edytujAdresata();
 };
 
 #endif

@@ -23,6 +23,7 @@ class PlikZAdresatami
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    void edytujWybranaLinieWPliku(string ciagZnakowDoZastapienia, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami)
@@ -36,7 +37,7 @@ public:
     int pobierzIdOstatniegoAdresata();
     void usunWybranegoAdresataZPliku(string liniaDoUsuniecia, int idUsuwanegoAdresata);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-
+    void zaktualizujDaneWybranegoAdresataWPliku(Adresat adresat, string ciagZnakowDoZastapienia);
 };
 
 #endif

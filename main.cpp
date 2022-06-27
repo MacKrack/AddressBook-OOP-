@@ -5,7 +5,6 @@ using namespace std;
 
 int main()
 {
-
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
     char wybor;
@@ -35,7 +34,6 @@ int main()
         }
         else
         {
-
             if (ksiazkaAdresowa.czyUzytkownikJestZalogowany() == true)
 
                 wybor = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
@@ -58,7 +56,7 @@ int main()
                 ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-                ;//edytujAdresata(adresaci);
+                ;ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
