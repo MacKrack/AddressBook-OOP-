@@ -154,7 +154,7 @@ void AdresatMenedzer::usunAdresata()
     char znak;
     bool czyIstniejeAdresat = false;
 
-    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end() && !adresaci.empty(); itr++)
     {
         if (itr -> pobierzId() == idUsuwanegoAdresata)
         {

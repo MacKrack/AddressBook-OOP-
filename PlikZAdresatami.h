@@ -7,12 +7,13 @@
 #include <cstdlib>
 #include <stdlib.h>
 
+#include "PlikTekstowy.h"
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 
-class PlikZAdresatami
+class PlikZAdresatami : public PlikTekstowy
 {
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
+    //const string NAZWA_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 
     MetodyPomocnicze metodyPomocnicze;
@@ -26,7 +27,7 @@ class PlikZAdresatami
     void edytujWybranaLinieWPliku(string ciagZnakowDoZastapienia, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 public:
-    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami)
+    PlikZAdresatami(string nazwaPliku) : PlikTekstowy (nazwaPliku)
     {
         idOstatniegoAdresata = 0;
     };
