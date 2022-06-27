@@ -23,7 +23,6 @@ class UzytkownikMenedzer
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
     PlikZUzytkownikami plikZUzytkownikami;
-    //MetodyPomocnicze metodyPomocnicze;
 
 public:
 

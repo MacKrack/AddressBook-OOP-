@@ -26,21 +26,6 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
     plikTekstowy.close();
 }
 
-//bool PlikZUzytkownikami::czyPlikJestPusty()
-//{
-//    fstream plikTekstowy;
-//
-//    plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::app);
-//
-//    plikTekstowy.seekg(0, ios::end);
-//    if (plikTekstowy.tellg() == 0)
-//        return true;
-//    else
-//        return false;
-//
-//    plikTekstowy.close();
-//}
-
 string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
 {
     string liniaZDanymiUzytkownika = "";
