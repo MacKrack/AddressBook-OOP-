@@ -7,3 +7,4 @@ plan/
 *.cscope_file_list
 Uzytkownicy.txt
 Adresaci.txt
+*.bak

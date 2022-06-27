@@ -18,11 +18,12 @@ class PlikZAdresatami
     MetodyPomocnicze metodyPomocnicze;
 
     bool czyPlikJestPusty();
-    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    void usunPlik(string nazwaPlikuZRozszerzeniem);
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    void edytujWybranaLinieWPliku(string ciagZnakowDoZastapienia, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami)
@@ -34,6 +35,9 @@ public:
     bool czyPlikIstnieje();
     int pobierzZPlikuIdOstatniegoAdresata();
     int pobierzIdOstatniegoAdresata();
+    void usunWybranegoAdresataZPliku(string liniaDoUsuniecia, int idUsuwanegoAdresata);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
+    void zaktualizujDaneWybranegoAdresataWPliku(Adresat adresat, string ciagZnakowDoZastapienia);
 };
 
 #endif
