@@ -193,6 +193,7 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(string liniaDoUsuniecia, int i
     nowy.close();
     usunPlik(pobierzNazwePliku());
     zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, pobierzNazwePliku());
+    idOstatniegoAdresata = pobierzZPlikuIdOstatniegoAdresata();
 }
 
 void PlikZAdresatami::usunPlik(string nazwaPlikuZRozszerzeniem)
