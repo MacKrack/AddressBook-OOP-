@@ -154,7 +154,7 @@ void AdresatMenedzer::usunAdresata()
     char znak;
     bool czyIstniejeAdresat = false;
 
-    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end() && !adresaci.empty(); itr++)
+    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
     {
         if (itr -> pobierzId() == idUsuwanegoAdresata)
         {
@@ -167,11 +167,14 @@ void AdresatMenedzer::usunAdresata()
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
+                break;
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
                 system("pause");
+                break;
+
             }
         }
     }
