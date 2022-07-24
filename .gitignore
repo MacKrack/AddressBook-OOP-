@@ -8,3 +8,6 @@ plan/
 Uzytkownicy.txt
 Adresaci.txt
 *.bak
+main
+*.DS_Store
+*.vscode/
