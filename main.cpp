@@ -3,8 +3,6 @@
 
 using namespace std;
 
-//test
-
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
@@ -30,7 +28,7 @@ int main()
                 break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
-                system("pause");
+                cin.get();
                 break;
             }
         }
