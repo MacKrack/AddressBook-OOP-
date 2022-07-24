@@ -8,7 +8,7 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
 
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
-    system("pause");
+    cin.get();
 }
 
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
@@ -60,7 +60,7 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
     if (uzytkownicy.empty() == true)
     {
         cout << "Nie ma jeszcze zadnych Uzytkownikow" << endl;
-        system("pause");
+        cin.get();
     }
     else
     {
@@ -70,7 +70,7 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow()
             cout << uzytkownicy[i].pobierzLogin() << endl;
             cout << uzytkownicy[i].pobierzHaslo() << endl;
         }
-        system("pause");
+        cin.get();
     }
 }
 
@@ -93,17 +93,17 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                 if (uzytkownicy[i].pobierzHaslo() == haslo)
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
-                    system("pause");
+                    cin.get();
                     return idZalogowanegoUzytkownika = uzytkownicy[i].pobierzId();
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
-            system("pause");
+            cin.get();
             return idZalogowanegoUzytkownika = 0;
         }
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
-    system("pause");
+    cin.get();
     return idZalogowanegoUzytkownika = 0;
 }
 
@@ -119,7 +119,7 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
         {
             uzytkownicy[i].ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
-            system("pause");
+            cin.get();
         }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);

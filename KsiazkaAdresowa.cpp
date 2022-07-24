@@ -16,7 +16,7 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     {
         uzytkownikMenedzer.logowanieUzytkownika();
     }
-    if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() !=0)
+    if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() != 0)
         adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
 }
 
@@ -41,7 +41,7 @@ void KsiazkaAdresowa::dodajAdresata()
     else
     {
         cout << "Aby dodac adresata, nalezy najpierw sie zalogowac" << endl;
-        system("pause");
+        cin.get();
     }
 }
 
@@ -54,7 +54,7 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
     else
     {
         cout << "Aby wyswietlic adresatow, nalezy najpierw sie zalogowac" << endl;
-        system("pause");
+        cin.get();
     }
 }
 
@@ -62,7 +62,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
     char wybor;
 
-    system("cls");
+    system("clear");
     cout << "    >>> MENU  GLOWNE <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Rejestracja" << endl;
@@ -79,7 +79,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
 {
     char wybor;
 
-    system("cls");
+    system("clear");
     cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Dodaj adresata" << endl;
@@ -100,7 +100,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
 
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 {
-    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany()==true)
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany() == true)
         return true;
     else
         return false;

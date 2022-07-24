@@ -4,7 +4,7 @@ void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
 
-    system("cls");
+    system("clear");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
     adresat = podajDaneNowegoAdresata();
 
@@ -41,7 +41,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
-    system("cls");
+    system("clear");
     if (!adresaci.empty())
     {
         cout << "             >>> ADRESACI <<<" << endl;
@@ -51,12 +51,12 @@ void AdresatMenedzer::wyswietlWszystkichAdresatow()
             wyswietlDaneAdresata(*itr);
         }
         cout << endl;
-        system("pause");
+        cin.get();
     }
     else
     {
         cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
-        system("pause");
+        cin.get();
     }
 }
 
@@ -75,7 +75,7 @@ void AdresatMenedzer::wyszukajAdresatowPoImieniu()
     string imiePoszukiwanegoAdresata = "";
     int iloscAdresatow = 0;
 
-    system("cls");
+    system("clear");
     if (!adresaci.empty())
     {
         cout << ">>> WYSZUKIWANIE ADRESATOW O IMIENIU <<<" << endl << endl;
@@ -99,7 +99,7 @@ void AdresatMenedzer::wyszukajAdresatowPoImieniu()
         cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
     }
     cout << endl;
-    system("pause");
+    cin.get();
 }
 
 void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
@@ -115,7 +115,7 @@ void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
     string nazwiskoPoszukiwanegoAdresata;
     int iloscAdresatow = 0;
 
-    system("cls");
+    system("clear");
     if (!adresaci.empty())
     {
         cout << ">>> WYSZUKIWANIE ADRESATOW O NAZWISKU <<<" << endl << endl;
@@ -139,7 +139,7 @@ void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
         cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
     }
     cout << endl;
-    system("pause");
+    cin.get();
 }
 
 void AdresatMenedzer::usunAdresata()
@@ -147,7 +147,7 @@ void AdresatMenedzer::usunAdresata()
     int idUsuwanegoAdresata = 0;
     int numerLiniiUsuwanegoAdresata = 0;
 
-    system("cls");
+    system("clear");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
     idUsuwanegoAdresata = podajIdWybranegoAdresata();
 
@@ -166,13 +166,13 @@ void AdresatMenedzer::usunAdresata()
                 plikZAdresatami.usunWybranegoAdresataZPliku(plikZAdresatami.zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(*itr), idUsuwanegoAdresata);
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
-                system("pause");
+                cin.get();
                 break;
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
-                system("pause");
+                cin.get();
                 break;
 
             }
@@ -181,13 +181,13 @@ void AdresatMenedzer::usunAdresata()
     if (czyIstniejeAdresat == false)
     {
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
-        system("pause");
+        cin.get();
     }
 }
 
 void AdresatMenedzer::edytujAdresata()
 {
-    system("cls");
+    system("clear");
     Adresat adresat;
     int idEdytowanegoAdresata = 0;
     int numerLiniiEdytowanegoAdresata = 0;
@@ -248,7 +248,7 @@ void AdresatMenedzer::edytujAdresata()
     {
         cout << endl << "Nie ma takiego adresata." << endl << endl;
     }
-    system("pause");
+    cin.get();
 }
 
 char AdresatMenedzer::wybierzOpcjeZMenuEdycja()

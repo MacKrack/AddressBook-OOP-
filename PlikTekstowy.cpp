@@ -1,9 +1,9 @@
 #include "PlikTekstowy.h"
 
 string PlikTekstowy::pobierzNazwePliku()
-    {
-        return NAZWA_PLIKU;
-    }
+{
+    return NAZWA_PLIKU;
+}
 
 bool PlikTekstowy::czyPlikJestPusty()
 {
